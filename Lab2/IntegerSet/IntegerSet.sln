@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerSet", "IntegerSet\IntegerSet.csproj", "{265D8F18-ED7F-4A82-AC4E-C771542D9E2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265D8F18-ED7F-4A82-AC4E-C771542D9E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265D8F18-ED7F-4A82-AC4E-C771542D9E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265D8F18-ED7F-4A82-AC4E-C771542D9E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265D8F18-ED7F-4A82-AC4E-C771542D9E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8445330D-4A58-4B6C-8809-2E2B61DFB196}
+	EndGlobalSection
+EndGlobal

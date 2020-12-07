@@ -1,0 +1,60 @@
+﻿<Window x:Class="WPFMVVMCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMVVMCalc"
+        xmlns:vm="clr-namespace:WPFMVVMCalc.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Window.Resources>
+        <vm:CalculationViewModel x:Key="CalculationViewModel"/>
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource CalculationViewModel}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+	        <RowDefinition/>
+	        <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+	    <TextBlock  Name="CalculationLogBox" Text="{Binding Path=CalculationLog, Mode=TwoWay}" Background="White" Margin="20,10,20,2" Grid.ColumnSpan="5" FontSize="24" TextAlignment="Right"></TextBlock>
+        <TextBlock  Name="DisplayBox" Text="{Binding Path=Display, Mode=TwoWay}" Background="White" Margin="20,10,20,2" Grid.ColumnSpan="5" Grid.Row="1" FontSize="24" TextAlignment="Right"></TextBlock>
+
+	    <Button Name="Button7" Command="{Binding DigitButtonPressCommand}" CommandParameter="7" Grid.Column="0" Grid.Row="3">7</Button>
+        <Button Name="Button8" Command="{Binding DigitButtonPressCommand}" CommandParameter="8" Grid.Column="1" Grid.Row="3">8</Button>
+        <Button Name="Button9" Command="{Binding DigitButtonPressCommand}" CommandParameter="9" Grid.Column="2" Grid.Row="3">9</Button>
+
+        <Button Name="Button4" Command="{Binding DigitButtonPressCommand}" CommandParameter="4" Grid.Column="0" Grid.Row="4" >4</Button>
+        <Button Name="Button5" Command="{Binding DigitButtonPressCommand}" CommandParameter="5" Grid.Column="1" Grid.Row="4" >5</Button>
+        <Button Name="Button6" Command="{Binding DigitButtonPressCommand}" CommandParameter="6" Grid.Column="2" Grid.Row="4" >6</Button>
+
+        <Button Name="Button1" Command="{Binding DigitButtonPressCommand}" CommandParameter="1" Grid.Column="0" Grid.Row="5" >1</Button>
+        <Button Name="Button2" Command="{Binding DigitButtonPressCommand}" CommandParameter="2" Grid.Column="1" Grid.Row="5" >2</Button>
+        <Button Name="Button3" Command="{Binding DigitButtonPressCommand}" CommandParameter="3" Grid.Column="2" Grid.Row="5" >3</Button>
+
+        <Button Name="EmptyButton" Grid.Column="0" Grid.Row="7" ></Button>
+        <Button Name="Button0" Command="{Binding DigitButtonPressCommand}" CommandParameter="0" Grid.Column="1" Grid.Row="7" >0</Button>
+        <Button Name="ButtonPoint" Command="{Binding DigitButtonPressCommand}" CommandParameter="." Grid.Column="2" Grid.Row="7" >.</Button>
+
+        <Button Name="ButtonDivide" Command="{Binding OperationButtonPressCommand}" CommandParameter="/" Background="Darkgray" Grid.Column="3" Grid.Row="2" >/</Button>
+        <Button Name="ButtonMultiply" Command="{Binding OperationButtonPressCommand}" CommandParameter="*" Background="Darkgray" Grid.Column="3" Grid.Row="3" >*</Button>
+        <Button Name="ButtonMinus" Command="{Binding OperationButtonPressCommand}" CommandParameter="-" Background="Darkgray" Grid.Column="3" Grid.Row="4" >-</Button>
+        <Button Name="ButtonPlus" Command="{Binding OperationButtonPressCommand}" CommandParameter="+" Background="Darkgray" Grid.Column="3" Grid.Row="5">+</Button>
+
+        <Button Name="EmptyButton2" Background="Darkgray" Grid.Column="0" Grid.Row="2"></Button>
+        <Button Name="ButtonC" Command="{Binding OperationButtonPressCommand}" CommandParameter="C" Background="Darkgray" Grid.Column="2" Grid.Row="2" ToolTip="Clear All">C</Button>
+        <Button Name="ButtonDel" Command="{Binding OperationButtonPressCommand}" CommandParameter="Del" Background="Darkgray" Grid.Column="1" Grid.Row="2" ToolTip="Delete">Del</Button>
+
+        <Button Name="ButtonEqual" Command="{Binding OperationButtonPressCommand}" CommandParameter="=" Background="Darkgray" Grid.Column="3" Grid.Row="6">=</Button>
+    </Grid>
+</Window>
